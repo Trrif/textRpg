@@ -4,7 +4,8 @@ import ItemList from './itemList'
 import Name from './name'
 import Health from './health'
 import BackpackItemList from './backpackItemList'
-import { Card, Modal, Header, Button, Icon, Image, Grid, Label, Container } from 'semantic-ui-react'
+import BackpackPotionList from './backpackPotionList'
+import { Card, Modal, Header, Button, Icon, Image, Grid, Label, Container, Divider } from 'semantic-ui-react'
 
 export default class CharacterPanel extends React.Component {
   render () {
@@ -20,6 +21,7 @@ export default class CharacterPanel extends React.Component {
                 <Grid.Row>
                   <Grid.Column>
                     <Name name={this.props.name}/>
+                    <Health health={this.props.health}/>
                     <br/>
                     <StatList stats={this.props.stats} />
                   </Grid.Column>
@@ -34,7 +36,10 @@ export default class CharacterPanel extends React.Component {
             <Header textAlign='center' content='Рюкзак' />
             <Modal.Content>
               <Card.Group itemsPerRow={3}>
-                <BackpackItemList items={this.props.items} backpackItemDelete={this.props.backpackItemDelete} backpackItemUse={this.props.backpackItemUse} backpackItems={this.props.backpack} />
+                <Divider style={{color: 'white'}} horizontal>Зелья</Divider>
+                <BackpackPotionList backpackItemDelete={this.props.backpackItemDelete} backpackItemUse={this.props.backpackItemUse} backpackPotions={this.props.backpack.filter((item, index) => { if (item.type === 'potion') { item.index = index; return true } })} />
+                <Divider style={{color: 'white'}} horizontal>Предметы</Divider>
+                <BackpackItemList items={this.props.items} backpackItemDelete={this.props.backpackItemDelete} backpackItemUse={this.props.backpackItemUse} backpackItems={this.props.backpack.filter((item, index) => { if (item.type !== 'potion') { item.index = index; return true } })} />
               </Card.Group>
             </Modal.Content>
           </Modal>

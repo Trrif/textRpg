@@ -23,15 +23,14 @@ export default class Item extends React.Component {
             {this.props.item.description}
           </Card.Description>
         </Card.Content>
-        <Card.Content extra>
-          <Div> {'Ловкость: ' + this.props.item.stats.agility}
-            <br/>
-            {'Сила: ' + this.props.item.stats.strength}
-            <br/>
-            {'Интеллект: ' + this.props.item.stats.intelligent}
-            <br/>
-            {'Сила атаки: ' + this.props.item.stats.attackPower}
-          </Div>
+        <Card.Content extra style={{textAlign: 'center'}}>
+          {'Ловкость: ' + this.props.item.stats.agility}
+          <br/>
+          {'Сила: ' + this.props.item.stats.strength}
+          <br/>
+          {'Интеллект: ' + this.props.item.stats.intelligent}
+          <br/>
+          {'Сила атаки: ' + this.props.item.stats.attackPower}
         </Card.Content>
       </Card>}
     />
