@@ -11,7 +11,7 @@ export default class CharacterPanel extends React.Component {
     return <Grid columns={1}>
       <Grid.Row>
         <Grid.Column>
-          <Modal trigger={<div>
+          <Modal style={{border: '1px solid gray', borderRadius: '5px'}} trigger={<div>
             <Image label={<Label style={{textAlign: 'center'}} attached='bottom' content={this.props.health.value + ' / ' + this.props.health.maxValue} color='red'/>} style={{cursor: 'pointer'}} size='tiny' src='character.svg' />
           </div>} basic size='small'>
             <Header textAlign='center' content='Панель персонажа' />
@@ -30,7 +30,7 @@ export default class CharacterPanel extends React.Component {
               </Grid>
             </Modal.Content>
           </Modal>
-          <Modal trigger={<Image style={{cursor: 'pointer'}} size='tiny' src='backpack.svg'/>} basic size='small'>
+          <Modal style={{border: '1px solid gray', borderRadius: '5px'}} trigger={<Image style={{cursor: 'pointer'}} size='tiny' src='backpack.svg'/>} basic size='small'>
             <Header textAlign='center' content='Рюкзак' />
             <Modal.Content>
               <Card.Group itemsPerRow={3}>
