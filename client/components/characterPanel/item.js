@@ -1,14 +1,10 @@
 import React from 'react'
 import {Card, Image, Popup, Container} from 'semantic-ui-react'
-import styled from 'styled-components'
 
-const Div = styled.div`
-text-align:center;
-`
 export default class Item extends React.Component {
   render () {
     return <Container> <Popup
-      position="right center"
+      position='right center'
       trigger={<Image verticalAlign='middle' size='mini' src={this.props.item.type + '.svg'} />}
       content={<Card>
         <Card.Content>

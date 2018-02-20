@@ -1,6 +1,5 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
-import { Image, Card, Button, Icon, Popup, Label } from 'semantic-ui-react'
+import { Image, Card, Button } from 'semantic-ui-react'
 
 export default class BackpackPotion extends React.Component {
   render () {
@@ -18,7 +17,7 @@ export default class BackpackPotion extends React.Component {
         </Card.Description>
       </Card.Content>
       <Card.Content extra style={{textAlign: 'center'}}>
-        <Button color='green' onClick={this.props.backpackItemUse}> Использовать </Button>
+        <Button color='green' onClick={this.props.backpackItemUse}> Выпить </Button>
         <Button color='red' onClick={this.props.backpackItemDelete} icon='trash' />
       </Card.Content>
     </Card>

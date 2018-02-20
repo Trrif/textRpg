@@ -1,11 +1,10 @@
 import React from 'react'
 import StatList from './statList'
 import ItemList from './itemList'
-import Name from './name'
 import Health from './health'
 import BackpackItemList from './backpackItemList'
 import BackpackPotionList from './backpackPotionList'
-import { Card, Modal, Header, Button, Icon, Image, Grid, Label, Container, Divider } from 'semantic-ui-react'
+import { Card, Modal, Header, Image, Grid, Label, Divider } from 'semantic-ui-react'
 
 export default class CharacterPanel extends React.Component {
   render () {
@@ -20,7 +19,7 @@ export default class CharacterPanel extends React.Component {
               <Grid columns={2} textAlign='center'>
                 <Grid.Row>
                   <Grid.Column>
-                    <Name name={this.props.name}/>
+                    {this.props.name}
                     <Health health={this.props.health}/>
                     <br/>
                     <StatList stats={this.props.stats} />

@@ -1,7 +1,5 @@
-import React from 'react'
 import { connect } from 'react-redux'
 import CharacterPanel from '../components/characterPanel'
-import { bindActionCreators } from 'redux'
 import * as actions from '../actions'
 const mapStateToProps = state => {
   return {

@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux'
-import { CHANGE_NAME, CHANGE_STAT, EQUIP_ITEM } from '../actions'
 
 function character (state = {
   stats: [

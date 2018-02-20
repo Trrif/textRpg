@@ -1,11 +1,10 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
-import { Image, Card, Button, Icon, Popup, Label } from 'semantic-ui-react'
+import { Image, Card, Button, Popup, Label } from 'semantic-ui-react'
 
 export default class BackpackItem extends React.Component {
   render () {
     return <Popup
-      position="top center"
+      position='top center'
       trigger={<Card>
         <Card.Content>
           <Image floated='right' size='mini' src={this.props.backpackItem.type + '.svg'} />

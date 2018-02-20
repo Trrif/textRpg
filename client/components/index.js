@@ -1,6 +1,6 @@
 import React from 'react'
 import CharacterPanelContainer from '../containers/characterPanel'
-import { Grid, Container } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 
 export default class App extends React.Component {
   render () {
