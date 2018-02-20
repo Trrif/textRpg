@@ -4,7 +4,7 @@ import {AppContainer} from 'react-hot-loader'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import reducers from './reducers'
-import * as actions from './actions'
+import * as actions from './actions/characterPanel'
 import App from './components'
 let store = createStore(reducers)
 const dispose = store.subscribe(() => {
@@ -22,7 +22,39 @@ type: 'weapon',
 name: 'Оружие',
 description: 'рандомное',
 stats: {agility: 2, strength: 2, intelligent: 1, attackPower: 1}}))
-
+store.dispatch(actions.backpackPush({use: (dispatch, item, index, actions) => {
+  dispatch(actions.backpackItemUse(index))
+  dispatch(actions.changeHealth(item.value))
+},
+delete: (dispatch, index, actions) => {
+  dispatch(actions.backpackItemUse(index))
+},
+type: 'potion',
+name: 'Зелья говна',
+value: -10,
+description: '-10 хп зелье'}))
+store.dispatch(actions.backpackPush({use: (dispatch, item, index, actions) => {
+  dispatch(actions.backpackItemUse(index))
+  dispatch(actions.changeHealth(item.value))
+},
+delete: (dispatch, index, actions) => {
+  dispatch(actions.backpackItemUse(index))
+},
+type: 'potion',
+name: 'Зелья говна',
+value: -10,
+description: '-10 хп зелье'}))
+store.dispatch(actions.backpackPush({use: (dispatch, item, index, actions) => {
+  dispatch(actions.backpackItemUse(index))
+  dispatch(actions.changeHealth(item.value))
+},
+delete: (dispatch, index, actions) => {
+  dispatch(actions.backpackItemUse(index))
+},
+type: 'potion',
+name: 'Зелья говна',
+value: -10,
+description: '-10 хп зелье'}))
 store.dispatch(actions.backpackPush({use: (dispatch, item, index, actions) => {
   dispatch(actions.backpackItemUse(index))
   dispatch(actions.equipItem(item))
