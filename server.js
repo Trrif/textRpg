@@ -23,7 +23,11 @@ if (isDevelopment) {
 }
 app.use(express.static(PUBLIC_PATH))
 app.post('/nextDialog', function (req, res) {
-
+  res.json({
+    text: 'Тестовое окно 22',
+    index: 1,
+    answers: [ {index: 1, text: 'тест 1'}, {index: 2, text: 'тест 2'}, {index: 3, text: 'тест 3'}, {index: 4, text: 'тест 4'} ]
+  })
 })
 app.get('*', function (req, res) {
   res.sendFile(path.resolve(PUBLIC_PATH, 'index.html'))
