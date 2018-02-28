@@ -7,10 +7,8 @@ import reducers from './reducers'
 import * as actions from './actions/character'
 import App from './components'
 let store = createStore(reducers)
-const dispose = store.subscribe(() => {
-  console.log(store.getState())
-}
-)
+
+//  Some backpack items and potions for test
 store.dispatch(actions.backpackPush({use: (dispatch, item, index, actions) => {
   dispatch(actions.backpackItemUse(index))
   dispatch(actions.equipItem(item))
@@ -22,6 +20,7 @@ type: 'weapon',
 name: 'Оружие',
 description: 'рандомное',
 stats: {agility: 2, strength: 2, intelligent: 1, attackPower: 1}}))
+
 store.dispatch(actions.backpackPush({use: (dispatch, item, index, actions) => {
   dispatch(actions.backpackItemUse(index))
   dispatch(actions.changeHealth(item.value))
@@ -30,9 +29,10 @@ delete: (dispatch, index, actions) => {
   dispatch(actions.backpackItemUse(index))
 },
 type: 'potion',
-name: 'Зелья говна',
+name: 'Яд',
 value: -10,
-description: '-10 хп зелье'}))
+description: 'Зелье которое нанесёт 10 урона'}))
+
 store.dispatch(actions.backpackPush({use: (dispatch, item, index, actions) => {
   dispatch(actions.backpackItemUse(index))
   dispatch(actions.changeHealth(item.value))
@@ -41,9 +41,10 @@ delete: (dispatch, index, actions) => {
   dispatch(actions.backpackItemUse(index))
 },
 type: 'potion',
-name: 'Зелья говна',
+name: 'Яд',
 value: -10,
-description: '-10 хп зелье'}))
+description: 'Зелье которое нанесёт 10 урона'}))
+
 store.dispatch(actions.backpackPush({use: (dispatch, item, index, actions) => {
   dispatch(actions.backpackItemUse(index))
   dispatch(actions.changeHealth(item.value))
@@ -52,9 +53,10 @@ delete: (dispatch, index, actions) => {
   dispatch(actions.backpackItemUse(index))
 },
 type: 'potion',
-name: 'Зелья говна',
-value: -10,
-description: '-10 хп зелье'}))
+name: 'Зелья лечение',
+value: 10,
+description: 'Зелье которое вылечит 10 хп'}))
+
 store.dispatch(actions.backpackPush({use: (dispatch, item, index, actions) => {
   dispatch(actions.backpackItemUse(index))
   dispatch(actions.equipItem(item))

@@ -6,22 +6,22 @@ const BACKPACK_PUSH = 'BACKPACK_PUSH'
 const BACKPACK_ITEM_USE = 'BACKPACK_ITEM_USE'
 
 export function backpackItemUse (index) {
-  return { type: 'BACKPACK_ITEM_USE', index }
+  return { type: BACKPACK_ITEM_USE, index }
 }
 export function backpackPush (item) {
-  return { type: 'BACKPACK_PUSH', item }
+  return { type: BACKPACK_PUSH, item }
 }
 export function changeHealth (value) {
-  return { type: 'CHANGE_HEALTH', value }
+  return { type: CHANGE_HEALTH, value }
 }
 export function changeName (name) {
-  return { type: 'CHANGE_NAME', name }
+  return { type: CHANGE_NAME, name }
 }
 
 export function changeStat (stat) {
-  return { type: 'CHANGE_STAT', stat }
+  return { type: CHANGE_STAT, stat }
 }
 
 export function equipItem (item) {
-  return { type: 'EQUIP_ITEM', item }
+  return { type: EQUIP_ITEM, item }
 }

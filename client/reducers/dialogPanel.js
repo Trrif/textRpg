@@ -1,7 +1,6 @@
 export default function dialog (state = {
-  text: 'Тестовое окно',
-  index: 1,
-  answers: [ {index: 1, text: 'тест 1'} ]
+  text: 'Стартовый Диалог',
+  answers: [ {linkTo: 1, text: 'Переход на серверные диалоги'} ]
 }, action) {
   switch (action.type) {
     case 'NEXT_DIALOG':

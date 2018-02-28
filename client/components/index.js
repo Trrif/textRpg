@@ -7,7 +7,7 @@ export default class App extends React.Component {
   render () {
     return <Grid style={{height: '100%'}} verticalAlign='middle' columns={12} centered>
       <Grid.Row>
-        <Grid.Column computer={2}>
+        <Grid.Column computer={1}>
           <CharacterPanelContainer />
         </Grid.Column>
         <Grid.Column computer={8}>

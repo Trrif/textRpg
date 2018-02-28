@@ -1,18 +1,16 @@
 import React from 'react'
-import Styled, { css } from 'styled-components'
+import { Button } from 'semantic-ui-react'
+import Styled from 'styled-components'
 const Div = Styled.div`
 background-color: #4A4A4A;
 color: #fff;
 padding: 15px;
 border-radius: 5px;
-${props => props.answer && css`
-  cursor: pointer;
-  margin-bottom: 1px;
-`}
+text-align: center;
 `
 export default class DialogText extends React.Component {
   render () {
-    return this.props.onAnswerClick !== undefined ? <Div onClick={this.props.onAnswerClick} answer> {this.props.text} </Div>
+    return this.props.onAnswerClick !== undefined ? <Button onClick={this.props.onAnswerClick} fluid> {this.props.text} </Button >
       : <Div> {this.props.text} </Div>
   }
 }
