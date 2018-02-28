@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import CharacterPanel from '../components/characterPanel'
-import * as actions from '../actions/characterPanel'
+import * as actions from '../actions/character'
 const mapStateToProps = state => {
   return {
     stats: state.character.stats.map((stat) => {

@@ -1,9 +1,9 @@
-export const EQUIP_ITEM = 'EQUIP_ITEM'
-export const CHANGE_STAT = 'CHANGE_STAT'
-export const CHANGE_NAME = 'CHANGE_NAME'
-export const CHANGE_HEALTH = 'CHANGE_HEALTH'
-export const BACKPACK_PUSH = 'BACKPACK_PUSH'
-export const BACKPACK_ITEM_USE = 'BACKPACK_ITEM_USE'
+const EQUIP_ITEM = 'EQUIP_ITEM'
+const CHANGE_STAT = 'CHANGE_STAT'
+const CHANGE_NAME = 'CHANGE_NAME'
+const CHANGE_HEALTH = 'CHANGE_HEALTH'
+const BACKPACK_PUSH = 'BACKPACK_PUSH'
+const BACKPACK_ITEM_USE = 'BACKPACK_ITEM_USE'
 
 export function backpackItemUse (index) {
   return { type: 'BACKPACK_ITEM_USE', index }

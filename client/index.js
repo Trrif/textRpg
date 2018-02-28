@@ -4,7 +4,7 @@ import {AppContainer} from 'react-hot-loader'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import reducers from './reducers'
-import * as actions from './actions/characterPanel'
+import * as actions from './actions/character'
 import App from './components'
 let store = createStore(reducers)
 const dispose = store.subscribe(() => {
