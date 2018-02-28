@@ -10,7 +10,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => {
   return {
     nextDialog: (currentDialog) => {
-      console.log('ss')
       fetch('/nextDialog', {
         method: 'POST',
         headers: { 'Content-type': 'application/json; charset=UTF-8' },
